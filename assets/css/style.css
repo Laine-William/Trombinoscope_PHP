@@ -1,0 +1,107 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --primary: #76c4b6;
+    --secondary: #3a556a;
+}
+
+html,
+body {
+    height: 100vh;
+    background-color: var(--secondary);
+}
+
+body {
+    font-family: roboto;
+    display: flex;
+    flex-direction: column;
+}
+
+main.site-content { 
+    flex: 1 1 100%;
+}
+
+.spacer {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}     
+
+.block {
+    height: 300px;
+    padding-top: 15px;  
+}  
+  
+.block2 {
+    min-height: 160px;
+    padding-top: 15px; 
+} 
+
+/* ----------------------------------------------------------------------------------------------------
+    HOME LAYOUT
+-------------------------------------------------------------------------------------------------------*/
+#home {
+    display: grid;
+    align-content: center;
+}
+
+#home nav ul {
+    width: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(33vh, 1fr);
+    gap: 10px;
+}
+
+#home nav li {
+    list-style-type: none;
+    border: 1px solid transparent;
+    position: relative;
+    background-color: #d6d5d5;
+}
+
+#home nav ul a {
+    font-size: 5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--primary);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home nav ul a span {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+#footer {
+    bottom: 0;
+    height: 2rem;
+    position: fixed;
+    width: 100%;
+}
+
+@media (min-width: 760px){
+    #home nav ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+header nav.navbar, #footer {
+    background-color: var(--primary);
+}
+
+.site-content li {
+    object-fit: cover;
+}
