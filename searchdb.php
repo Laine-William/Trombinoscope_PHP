@@ -34,18 +34,6 @@ require_once ('./libraries/db.php');
 
             exit();
 
-        } else {
-
-            while ($row = $result->fetch_assoc()) {
-
-                echo "<b>Id de la classe</b>: ". $row['class_id'] . "<br />";
-                echo "<b>Nom de la classe</b>: ". $row['class_name'] . "<br />";
-            } 
         }
-
-    } else { 
-
-        echo "Rien n'est alloue !";
-        exit();
     }
 ?>
